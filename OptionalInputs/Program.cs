@@ -21,13 +21,21 @@ namespace OptionalInputs
 
             Console.WriteLine("Second input (Default: 2):");
 
-            int num2 = Convert.ToInt32(Console.ReadLine());
+            string num2_string = Console.ReadLine();
 
-            int ret = n.Mult(num1, num2);
-
-            Console.WriteLine("Multiplying...");
-            Console.WriteLine("Your answer is: " + ret);
-
+            if (num2_string == "")
+            {
+                int ret = n.Mult(num1);
+                Console.WriteLine("Multiplying...");
+                Console.WriteLine("Your answer is: " + ret);
+            }
+            else if (num2_string != "")
+            {
+                int num2 = Convert.ToInt32(num2_string);
+                int ret = n.Mult(num1, num2);
+                Console.WriteLine("Multiplying...");
+                Console.WriteLine("Your answer is: " + ret);
+            }
             Console.Read();
         }
         class OptionalInputs
