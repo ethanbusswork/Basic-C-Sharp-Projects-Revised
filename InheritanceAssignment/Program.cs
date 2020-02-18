@@ -10,19 +10,19 @@ namespace InheritanceAssignment
     {
         static void Main(string[] args)
         {
-            Employee p = new Employee() { FirstName = "Ethan", LastName = "Buss", ID = 0001 };
-            Employee a = new Employee() { FirstName = "Jim", LastName = "Halpert", ID = 0002 };
+            Employee p = new Employee() { FirstName = "Ethan", LastName = "Buss"/*, ID = 0001 */};
+            Employee a = new Employee() { FirstName = "Jim", LastName = "Halpert"/*, ID = 0002 */};
             List<Employee> employees = new List<Employee>();
             employees.Add(p);
             employees.Add(a);
 
             foreach (Employee employee in employees)
             {
-                Console.WriteLine("\nFirst Name: " + employee.FirstName + "\nLast Name: " + employee.LastName + "\nID: " + employee.ID);
+                Console.WriteLine("\nFirst Name: " + employee.FirstName + "\nLast Name: " + employee.LastName/* + "\nID: " + employee.ID)*/);
             }
             
 
-            Console.WriteLine("\nEmployee '" + p.FirstName + " " + p.LastName + "' and '" + a.FirstName + " " + a.LastName + "' have equal ID's: " + (p.ID == a.ID));
+            //Console.WriteLine("\nEmployee '" + p.FirstName + " " + p.LastName + "' and '" + a.FirstName + " " + a.LastName + "' have equal ID's: " + (p.ID == a.ID));
             
             Console.Read();
         }
@@ -30,5 +30,6 @@ namespace InheritanceAssignment
         {
             //Have no idea if this is right ^^
         }
+
     }
 }
