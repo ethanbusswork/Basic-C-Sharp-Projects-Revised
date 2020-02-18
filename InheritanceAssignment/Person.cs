@@ -11,10 +11,9 @@ namespace InheritanceAssignment
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        public void SayName()
+        public virtual void SayName()
         {
             Console.WriteLine("Name: " + FirstName + " " + LastName);
-            Console.Read();
         }
     }
 }

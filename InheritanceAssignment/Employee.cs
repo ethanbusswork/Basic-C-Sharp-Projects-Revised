@@ -8,11 +8,30 @@ namespace InheritanceAssignment
 {
     public class Employee : Person, IQuittable
     {
+        List<Employee> employees = new List<Employee>();
         public int ID { get; set; }
 
         public void Quit()
         {
             throw new NotImplementedException();
+        }
+
+        public override void SayName()
+        {
+            base.SayName();
+            Console.WriteLine("ID: " + ID);
+            Console.Read();
+        }
+
+        public static bool operator ==(Employee p, Employee a)
+        {
+            bool equality = (p.ID == a.ID);
+            return equality;
+        }
+        public static bool operator !=(Employee p, Employee a)
+        {
+            bool equality = (p.ID != a.ID);
+            return equality;
         }
     }
 }
