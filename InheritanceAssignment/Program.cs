@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace InheritanceAssignment
 {
-    class Program
+    class Program : IQuittable
     {
         static void Main(string[] args)
         {
             Employee p = new Employee() { FirstName = "Ethan", LastName = "Buss" };
             p.SayName();
+        }
+        void IQuittable.Quit()
+        {
+            //Have no idea if this is right ^^
         }
     }
 }

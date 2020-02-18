@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace InheritanceAssignment
 {
-    public class Employee : Person
+    public class Employee : Person, IQuittable
     {
         public int ID { get; set; }
+
+        public void Quit()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
