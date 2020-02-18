@@ -12,7 +12,7 @@ namespace TwentyOne
         {
             Deck deck = new Deck();
 
-            deck.Shuffle(3);
+            deck.Shuffle(5);
 
             foreach (Card card in deck.Cards)
             {
