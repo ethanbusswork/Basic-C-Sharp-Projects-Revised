@@ -30,7 +30,9 @@ namespace LambdaAssignment
                 Console.WriteLine("ID: " + employee.ID);
             }
 
-            List<Employee> filteredEmployees = employees.Where(x => x.FirstName == "Joe").ToList();
+            List<Employee> filteredEmployeesName = employees.Where(x => x.FirstName == "Joe").ToList();
+
+            List<Employee> filteredEmployeesID = employees.Where(x => x.ID > 5).ToList();
 
             //foreach (Employee employee in employees)
             //{
@@ -40,9 +42,17 @@ namespace LambdaAssignment
             //    }
             //}
 
-            Console.WriteLine("\n\n<<<<< Filtered Employees >>>>>");
+            Console.WriteLine("\n\n<<<<< Filtered Employees by name : Joe >>>>>");
 
-            foreach (Employee employee in filteredEmployees)
+            foreach (Employee employee in filteredEmployeesName)
+            {
+                Console.WriteLine("\nName: " + employee.FirstName + " " + employee.LastName);
+                Console.WriteLine("ID: " + employee.ID);
+            }
+
+            Console.WriteLine("\n\n<<<<< Filtered Employees by ID : Greater than 5 >>>>>");
+
+            foreach (Employee employee in filteredEmployeesID)
             {
                 Console.WriteLine("\nName: " + employee.FirstName + " " + employee.LastName);
                 Console.WriteLine("ID: " + employee.ID);
