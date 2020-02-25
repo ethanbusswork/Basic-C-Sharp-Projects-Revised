@@ -38,7 +38,7 @@ namespace Casino.TwentyOne
                 }
                 if (bet < 0)
                 {
-                    throw new FraudException();
+                    throw new FraudException("Rules and Regulations violation detected.");
                 }
                 bool successfullyBet = player.Bet(bet);
                 if (!successfullyBet)
